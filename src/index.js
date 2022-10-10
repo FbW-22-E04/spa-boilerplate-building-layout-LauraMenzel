@@ -20,7 +20,21 @@ const data = {
 const container = document.getElementById("root");
 
 // create a root
-const root = ReactDOM.createRoot(container);
 
+const content = (
+  <div className="card m-5"style={{width: "18rem"}}>
+    <img className="card-img-top" src="{data.image}" alt="Card image cap" />
+    <div className="card-body">
+      <h5 className="card-title">{data.cardTitle}</h5>
+      <p className="card-text">
+        {data.cardDescription}
+      </p>
+      <a href="{data.button.url}" className="btn btn-primary">
+        {data.button.label}
+      </a>
+    </div>
+  </div>
+);
 //render app to root
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(content);
